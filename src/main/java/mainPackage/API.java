@@ -1,5 +1,6 @@
 package mainPackage;
 
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -9,6 +10,7 @@ import static io.restassured.RestAssured.given;
 
 public class API {
 
+    @Step
     public static Response get(String url) {
         return given()
                 .when()
@@ -18,6 +20,7 @@ public class API {
                 .extract().response();
     }
 
+    @Step
     public static Response postWithParams(String body, String endPoint) {
         return given()
                 .body(body)
@@ -28,6 +31,7 @@ public class API {
                 .extract().response();
     }
 
+    @Step
     public static void setUpRequestSpecifications(String url) {
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri(url)
