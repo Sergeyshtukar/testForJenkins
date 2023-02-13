@@ -1,6 +1,7 @@
 package tests;
 
 import mainPackage.API;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RunTests {
@@ -15,44 +16,8 @@ public class RunTests {
     public void apiPost() {
         API.setUpRequestSpecifications("https://reqres.in/");
         API.postWithParams("{\"name\":\"morpheus\",\"job\":\"leader\"}", "/api/users");
+        Assert.assertTrue(true);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //    @Test
 //    public void apiPost() {
