@@ -16,7 +16,7 @@ public class RunTests {
     public void apiPost() {
         API.setUpRequestSpecifications("https://reqres.in/");
         API.postWithParams("{\"name\":\"morpheus\",\"job\":\"leader\"}", "/api/users");
-        Assert.assertTrue(false, "Test failed");
+        Assert.assertTrue(false, "qweq qwe ");
     }
 
     //    @Test
