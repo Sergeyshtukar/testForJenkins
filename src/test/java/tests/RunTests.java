@@ -1,6 +1,7 @@
 package tests;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -34,6 +35,7 @@ public class RunTests {
         log.info("Distinct: " + distinct);
         log.info("Sorted: " + sorted);
         log.info("Reverse sorted: " + reverseSorted);
+        Assert.assertTrue(true, "assert message!!!");
     }
 
     //    @Test
