@@ -1,6 +1,7 @@
 package tests;
 
 import API.API;
+import io.qameta.allure.Attachment;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -48,6 +49,7 @@ public class RunTests {
         Assert.assertTrue(true, "Assert False!!!");
     }
 
+    @Attachment
     @Test
     public void googleTest() {
         log.info("Start google test");
