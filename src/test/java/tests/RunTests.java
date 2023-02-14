@@ -34,9 +34,7 @@ public class RunTests {
 
         log.info("Lists");
         List<String> distinct = collectionForDistinct.stream().distinct().collect(Collectors.toList());
-
         List<String> sorted = collectionSort.stream().sorted().collect(Collectors.toList());
-
         List<String> reverseSorted = collectionForReverseSort.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
 
         log.info("-------------------------");
