@@ -2,6 +2,8 @@ package tests;
 
 import API.API;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
+import listeners.TestAllureListeners;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -9,6 +11,9 @@ import org.testng.annotations.Test;
 import pages.GoogleMainPage;
 import tools.browserFactory.DriverStart;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -49,11 +54,12 @@ public class RunTests {
         Assert.assertTrue(true, "Assert False!!!");
     }
 
-    @Attachment
     @Test
     public void googleTest() {
         log.info("Start google test");
         GoogleMainPage googleMainPage = new GoogleMainPage();
+        TestAllureListeners testAllureListeners = new TestAllureListeners();
+        testAllureListeners.saveScreenshot();
         Assert.assertFalse(googleMainPage.isOnPage(), "Assert message");
     }
 
