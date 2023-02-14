@@ -1,9 +1,12 @@
 package tests;
 
-import mainPackage.API;
+import API.API;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+import pages.GoogleMainPage;
+import tools.browserFactory.DriverStart;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -44,6 +47,20 @@ public class RunTests {
         log.info("Reverse sorted: " + reverseSorted);
         Assert.assertTrue(false, "Assert False!!!");
     }
+
+    @Test
+    public void googleTest() {
+        log.info("Start google test");
+        GoogleMainPage googleMainPage = new GoogleMainPage();
+        Assert.assertTrue(googleMainPage.isOnPage(), "Assert message");
+        log.info("quit driver");
+        DriverStart.getInstance().quit();
+    }
+
+//    @AfterTest
+//    public void tearDown() {
+//        DriverStart.getInstance().quit();
+//    }
 
     //    @Test
 //    public void apiGet() {

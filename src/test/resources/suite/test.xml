@@ -9,6 +9,7 @@
                 <methods>
                     <include name="StreamCollection"></include>
                     <include name="apiPost"></include>
+                    <include name="googleTest"></include>
                 </methods>
             </class>
         </classes>
