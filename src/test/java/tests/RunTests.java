@@ -58,8 +58,8 @@ public class RunTests {
     public void googleTest() {
         log.info("Start google test");
         GoogleMainPage googleMainPage = new GoogleMainPage();
-        TestAllureListeners testAllureListeners = new TestAllureListeners();
-        testAllureListeners.saveScreenshot();
+//        TestAllureListeners testAllureListeners = new TestAllureListeners();
+//        testAllureListeners.saveScreenshot();
         Assert.assertFalse(googleMainPage.isOnPage(), "Assert message");
     }
 
