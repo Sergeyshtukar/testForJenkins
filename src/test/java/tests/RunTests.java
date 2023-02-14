@@ -1,5 +1,6 @@
 package tests;
 
+import mainPackage.API;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,8 +16,16 @@ public class RunTests {
     private static final Logger log = Logger.getLogger(RunTests.class);
 
     @Test
+    public void apiPost() {
+        log.info("start API test");
+        API.setUpRequestSpecifications("https://reqres.in/");
+        API.postWithParams("{\"name\":\"morpheus\",\"job\":\"leader\"}", "/api/users");
+        Assert.assertTrue(true, "qweq qwe ");
+    }
+
+    @Test
     public void StreamCollection() {
-        log.info("Start test");
+        log.info("Start stream collection test");
         log.info("----------------------");
         log.info("Collections");
         Collection<String> collectionForDistinct = Arrays.asList("1", "3", "1", "2", "2", "5");
@@ -42,14 +51,6 @@ public class RunTests {
 //    public void apiGet() {
 //        API.setUpRequestSpecifications("https://reqres.in/");
 //        API.get("/api/users?page=2");
-//    }
-
-//    @Test
-//    public void apiPost() {
-//        log.info("qweqweqwe !!!!!!!!!!!!!!!!!!!");
-//        API.setUpRequestSpecifications("https://reqres.in/");
-//        API.postWithParams("{\"name\":\"morpheus\",\"job\":\"leader\"}", "/api/users");
-//        Assert.assertTrue(true, "qweq qwe ");
 //    }
 
     //    @Test
