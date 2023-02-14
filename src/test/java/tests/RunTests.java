@@ -3,7 +3,6 @@ package tests;
 import API.API;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pages.GoogleMainPage;
 import tools.browserFactory.DriverStart;
@@ -52,7 +51,7 @@ public class RunTests {
     public void googleTest() {
         log.info("Start google test");
         GoogleMainPage googleMainPage = new GoogleMainPage();
-        Assert.assertTrue(googleMainPage.isOnPage(), "Assert message");
+        Assert.assertFalse(googleMainPage.isOnPage(), "Assert message");
         log.info("quit driver");
         DriverStart.getInstance().quit();
     }
