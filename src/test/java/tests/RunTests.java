@@ -35,7 +35,7 @@ public class RunTests {
         log.info("Distinct: " + distinct);
         log.info("Sorted: " + sorted);
         log.info("Reverse sorted: " + reverseSorted);
-        Assert.assertTrue(true, "assert message!!!");
+        Assert.assertTrue(false, "assert message!!!");
     }
 
     //    @Test
