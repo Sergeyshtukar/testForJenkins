@@ -20,7 +20,7 @@ public class RunTests {
         log.info("start API test");
         API.setUpRequestSpecifications("https://reqres.in/");
         API.postWithParams("{\"name\":\"morpheus\",\"job\":\"leader\"}", "/api/users");
-        Assert.assertTrue(true, "qweq qwe ");
+        Assert.assertTrue(true, "Assert True!!!");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class RunTests {
         log.info("Distinct: " + distinct);
         log.info("Sorted: " + sorted);
         log.info("Reverse sorted: " + reverseSorted);
-        Assert.assertTrue(false, "assert message!!!");
+        Assert.assertTrue(false, "Assert False!!!");
     }
 
     //    @Test
