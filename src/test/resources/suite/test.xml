@@ -2,6 +2,10 @@
 
 <suite name="UI tests" verbose="1" parallel="tests"
        thread-count="1" group-by-instances="true">
+    
+    <listeners>
+        <listener class-name="listeners.TestAllureListeners"></listener>
+    </listeners>
 
     <test name="TestName" preserve-order="true">
         <classes>
