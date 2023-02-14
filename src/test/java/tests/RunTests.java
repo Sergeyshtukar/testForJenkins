@@ -52,7 +52,7 @@ public class RunTests {
     public void googleTest() {
         log.info("Start google test");
         GoogleMainPage googleMainPage = new GoogleMainPage();
-        Assert.assertFalse(googleMainPage.isOnPage(), "Assert message");
+        Assert.assertTrue(googleMainPage.isOnPage(), "Assert message");
     }
 
     @AfterTest
